@@ -72,20 +72,7 @@ function App() {
         >
           Open-source code
         </a>{" "}
-        by <strong>Maja</strong>. Background image by{" "}
-        <strong>Hadiid Pratama</strong>(
-        <img
-          src="https://img.icons8.com/fluent-systems-regular/48/000000/instagram-new--v1.png"
-          rel="noreferrer"
-        />
-        <a
-          href="https://www.instagram.com/hddpratama/"
-          target="_blank"
-          rel="noreferrer"
-        >
-          hddpratama
-        </a>
-        ).
+        by <strong>Maja Ditrtova</strong>.
       </div>
     </div>
   );
