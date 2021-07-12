@@ -1,38 +1,87 @@
-.App {
-  text-align: center;
+.card {
+  font-family: "KoHo", sans-serif;
+  max-width: 530px;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  margin-top: 30px;
+  border: solid 1.4px #444444;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.card-body {
+  padding: 10px;
+  padding-bottom: 0;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.submit-button {
+  padding: 0.5px 8px;
+  margin: 5px;
+  background-color: #703937;
+  border: 1.5px solid #212529;
+  border-radius: 3px;
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+h1 {
+  color: #aa4400;
+  font-weight: bold;
+}
+.day-and-time {
+  margin-bottom: 2px;
+  font-size: 15px;
+  font-weight: 400;
+  color: #561c17;
+}
+.icon img {
+  width: 75px;
+  position: relative;
+  bottom: 10px;
+  left: -5px;
+}
+.current-temperature {
+  font-size: 40px;
+  color: #703937;
+  position: relative;
+  bottom: 5px;
+}
+.units {
+  font-size: 23px;
+  text-decoration: none;
+  vertical-align: top;
+  position: relative;
+  top: 2px;
+  color: #ff9e5e;
+}
+ul {
+  padding-left: 25px;
+}
+li {
+  text-transform: capitalize;
+  list-style: none;
+  position: relative;
+  top: 10px;
+  color: #703937;
+  font-weight: bold;
+  font-size: 15px;
+}
+.forecast {
+  text-align: center;
+  font-weight: bold;
+  background-color: rgb(255, 255, 255, 0.5);
+  color: #561c17;
+  margin-top: -12.5px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.forecast-icon {
+  width: 55px;
+}
+.credit {
+  margin-top: 3px;
+  margin-left: 2px;
+  font-size: 13px;
+}
+.credit img {
+  width: 15px;
+  position: relative;
+  bottom: 1px;
+}
+
+.credit a {
+  color: #703937;
 }
