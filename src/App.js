@@ -1,23 +1,36 @@
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import axios from "axios";
-import DayAndTime from "./DayAndTime";
 import React, { useState } from "react";
+import WeatherInfo from "./WeatherInfo";
 
 export default function App(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
+  const [city, setCity] = useState(props.defaultCity);
 
   function handleResponse(response) {
-    console.log(response.data);
     setWeatherData({
       ready: true,
+      date: new Date(response.data.dt * 1000),
       temperature: response.data.main.temp,
       description: response.data.weather[0].description,
       humidity: response.data.main.humidity,
       wind: response.data.wind.speed,
       city: response.data.name,
+      country: response.data.sys.country,
       icon: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
     });
+  }
+  function search() {
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=db470402812f5661f73e8a78f5ce0f76&units=metric`;
+    axios.get(apiUrl).then(handleResponse);
+  }
+  function handleSubmit(event) {
+    event.preventDefault();
+    search(city);
+  }
+  function handleCityChange(event) {
+    setCity(event.target.value);
   }
   if (weatherData.ready) {
     return (
@@ -25,69 +38,34 @@ export default function App(props) {
         <div className="container">
           <div className="card">
             <div className="card-body">
-              <form className="search-form">
+              <form className="search-form" onSubmit={handleSubmit}>
                 <input
                   type="text"
                   placeholder=" Find City"
                   className="input"
                   autoFocus="on"
+                  onChange={handleCityChange}
                 />
                 <input type="submit" value="Search" className="submit-button" />
               </form>
-              <h1 className="city">{weatherData.city}, UK</h1>
-              <div className="row">
-                <div className="col-6">
-                  <div className="day-and-time">
-                    Last updated:
-                    <DayAndTime />
-                  </div>
-                  <div className="row">
-                    <div className=" col-3 icon">
-                      <img
-                        src={weatherData.icon}
-                        alt={weatherData.description}
-                      />
-                    </div>
-                    <div className="col">
-                      <span className="col-7 current-temperature">
-                        {Math.round(weatherData.temperature)}
-                      </span>
-                      <span className="units"> °C </span>
-                    </div>
-                  </div>
-                </div>
-                <div className="col-6">
-                  <ul>
-                    <li className="description">{weatherData.description}</li>
-                    <li className="humidity">
-                      Humidity:{" "}
-                      <span className="humidity">{weatherData.humidity}%</span>
-                    </li>
-                    <li className="wind">
-                      Wind: <span>{weatherData.wind}mph</span>
-                    </li>
-                  </ul>
-                </div>
-              </div>
+              <WeatherInfo info={weatherData} />
             </div>
           </div>
-          <div className="credit">
-            <a
-              href="https://github.com/MajaDit/react-project"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Open-source code
-            </a>{" "}
-            by <strong>Maja Ditrtova</strong>.
-          </div>
+        </div>
+        <div className="credit">
+          <a
+            href="https://github.com/MajaDit/react-project"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Open-source code
+          </a>{" "}
+          by <strong>Maja Ditrtova</strong>.
         </div>
       </div>
     );
   } else {
-    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${props.defaultCity}&appid=db470402812f5661f73e8a78f5ce0f76&units=metric`;
-    axios.get(apiUrl).then(handleResponse);
-
+    search();
     return "Loading...";
   }
 }
