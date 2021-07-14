@@ -83,7 +83,7 @@ export default function App(props) {
       </div>
     );
   } else {
-    let apiUrl = `api.openweathermap.org/data/2.5/weather?q=${props.defaultCity}&appid=ad2ff494a03279abf350d133542944f6&units=metric`;
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${props.defaultCity}&appid=db470402812f5661f73e8a78f5ce0f76&units=metric`;
     axios.get(apiUrl).then(handleResponse);
 
     return "Loading...";
