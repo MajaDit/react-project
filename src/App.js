@@ -1,12 +1,14 @@
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import axios from "axios";
+import DayAndTime from "./DayAndTime";
 import React, { useState } from "react";
 
 export default function App(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
 
   function handleResponse(response) {
+    console.log(response.data);
     setWeatherData({
       ready: true,
       temperature: response.data.main.temp,
@@ -37,7 +39,7 @@ export default function App(props) {
                 <div className="col-6">
                   <div className="day-and-time">
                     Last updated:
-                    <span>Tuesday 14:00</span>
+                    <DayAndTime />
                   </div>
                   <div className="row">
                     <div className=" col-3 icon">
@@ -48,7 +50,7 @@ export default function App(props) {
                     </div>
                     <div className="col">
                       <span className="col-7 current-temperature">
-                        {weatherData.temperature}
+                        {Math.round(weatherData.temperature)}
                       </span>
                       <span className="units"> °C </span>
                     </div>
