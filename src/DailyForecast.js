@@ -3,7 +3,7 @@ import WeatherIcon from "./WeatherIcon";
 
 export default function DailyForecast(props) {
   function formatDay() {
-    let date = new Date(props.forecastData[0].dt * 1000);
+    let date = new Date(props.forecastData.dt * 1000);
     let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
     let day = days[date.getDay()];
     return day;
@@ -12,11 +12,11 @@ export default function DailyForecast(props) {
     <div className="DailyForecast">
       <div>{formatDay()}</div>
       <WeatherIcon
-        code={props.forecastData[0].weather[0].icon}
+        code={props.forecastData.weather[0].icon}
         size={34}
         color="#ab4603"
       />
-      <div>{Math.round(props.forecastData[0].temp.max)}°</div>
+      <div>{Math.round(props.forecastData.temp.max)}°</div>
     </div>
   );
 }
