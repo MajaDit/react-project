@@ -3,6 +3,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import axios from "axios";
 import React, { useState } from "react";
 import WeatherInfo from "./WeatherInfo";
+import Forecast from "./Forecast";
 
 export default function App(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
@@ -49,6 +50,7 @@ export default function App(props) {
                 <input type="submit" value="Search" className="submit-button" />
               </form>
               <WeatherInfo info={weatherData} />
+              <Forecast />
             </div>
           </div>
         </div>
