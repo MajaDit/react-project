@@ -1,3 +1,19 @@
 .Forecast {
   text-align: center;
 }
+.DailyForecast {
+  padding-top: 10px;
+}
+.forecastDay {
+  font-weight: bold;
+  padding-bottom: 5px;
+  font-size: 18px;
+}
+.maxTemperature,
+.minTemperature {
+  color: #561c17;
+  font-weight: bold;
+}
+.minTemperature {
+  opacity: 80%;
+}
