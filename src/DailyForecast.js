@@ -10,13 +10,20 @@ export default function DailyForecast(props) {
   }
   return (
     <div className="DailyForecast">
-      <div>{formatDay()}</div>
+      <div className="forecastDay">{formatDay()}</div>
       <WeatherIcon
         code={props.forecastData.weather[0].icon}
         size={34}
-        color="#ab4603"
+        color="#ff9e5e"
       />
-      <div>{Math.round(props.forecastData.temp.max)}°</div>
+      <div>
+        <span className="maxTemperature">
+          {Math.round(props.forecastData.temp.max)}°
+        </span>{" "}
+        <span className="minTemperature">
+          {Math.round(props.forecastData.temp.min)}°
+        </span>
+      </div>
     </div>
   );
 }
