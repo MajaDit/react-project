@@ -49,15 +49,14 @@ li {
   text-transform: capitalize;
   list-style: none;
   position: relative;
-  top: 10px;
-  left: 20px;
+  top: 20px;
   color: #703937;
   font-weight: bold;
   font-size: 15px;
 }
 
 .credit {
-  margin-top: 3px;
+  margin: 3px 0 0 85px;
   font-size: 13px;
 }
 

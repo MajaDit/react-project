@@ -9,7 +9,7 @@ export default function WeatherInfo(props) {
         {props.info.city}, {props.info.country}
       </h1>
       <div className="row">
-        <div className="col-6">
+        <div className="col-7">
           <div className="day-and-time">
             Last updated:
             <DayAndTime date={props.info.date} />
@@ -26,7 +26,7 @@ export default function WeatherInfo(props) {
             </div>
           </div>
         </div>
-        <div className="col-6">
+        <div className="col-5">
           <ul>
             <li className="description">{props.info.description}</li>
             <li className="humidity">
