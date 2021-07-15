@@ -20,6 +20,7 @@ export default function App(props) {
       city: response.data.name,
       country: response.data.sys.country,
       icon: response.data.weather[0].icon,
+      coordinates: response.data.coord,
     });
   }
   function search() {
@@ -50,7 +51,7 @@ export default function App(props) {
                 <input type="submit" value="Search" className="submit-button" />
               </form>
               <WeatherInfo info={weatherData} />
-              <Forecast />
+              <Forecast coordinates={weatherData.coordinates} />
             </div>
           </div>
         </div>
