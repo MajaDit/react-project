@@ -37,13 +37,21 @@ h1 {
 }
 .units {
   font-size: 23px;
-  text-decoration: none;
   vertical-align: top;
   position: relative;
-  top: 5px;
+  top: 10px;
+  color: #561c17;
+}
+.units a {
+  text-decoration: none;
   color: #ff9e5e;
 }
-
+.units a:hover {
+  color: #561c17;
+}
+.active {
+  font-weight: bold;
+}
 li {
   text-transform: capitalize;
   list-style: none;
