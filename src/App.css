@@ -18,7 +18,7 @@ h1 {
   font-weight: bold;
 }
 .day-and-time {
-  margin-bottom: 2px;
+  margin-bottom: 5px;
   font-size: 15px;
   font-weight: 400;
   color: #561c17;
@@ -26,7 +26,6 @@ h1 {
 .icon canvas {
   width: 50px;
   position: relative;
-  left: -5px;
   top: 5px;
 }
 .current-temperature {
