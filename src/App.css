@@ -68,3 +68,24 @@ li {
 .credit a {
   color: #703937;
 }
+
+@media (max-width: 500px) {
+  .card-body {
+    margin: 30px auto;
+    max-width: 300px;
+  }
+  .icon canvas {
+    max-width: 45px;
+  }
+  .current-temperature {
+    font-size: 40px;
+  }
+  .units {
+    font-size: 18px;
+  }
+  li {
+    top: 55px;
+    left: -20px;
+    font-size: 9px;
+  }
+}

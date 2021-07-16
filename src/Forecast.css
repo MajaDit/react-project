@@ -17,3 +17,12 @@
 .minTemperature {
   opacity: 0.8;
 }
+
+@media (max-width: 500px) {
+  .Forecast {
+    font-size: 13px;
+  }
+  .forecastDay {
+    font-size: 14px;
+  }
+}
