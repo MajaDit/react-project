@@ -38,21 +38,19 @@ export default function App(props) {
     return (
       <div className="App">
         <div className="container">
-          <div className="card">
-            <div className="card-body">
-              <form className="search-form" onSubmit={handleSubmit}>
-                <input
-                  type="text"
-                  placeholder=" Find City"
-                  className="input"
-                  autoFocus="on"
-                  onChange={handleCityChange}
-                />
-                <input type="submit" value="Search" className="submit-button" />
-              </form>
-              <WeatherInfo info={weatherData} />
-              <Forecast coordinates={weatherData.coordinates} />
-            </div>
+          <div className="card-body">
+            <form className="search-form" onSubmit={handleSubmit}>
+              <input
+                type="text"
+                placeholder=" Find City"
+                className="input"
+                autoFocus="on"
+                onChange={handleCityChange}
+              />
+              <input type="submit" value="Search" className="submit-button" />
+            </form>
+            <WeatherInfo info={weatherData} />
+            <Forecast coordinates={weatherData.coordinates} />
           </div>
         </div>
         <div className="credit">

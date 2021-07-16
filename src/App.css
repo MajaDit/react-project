@@ -1,6 +1,7 @@
 .card-body {
   font-family: "KoHo", sans-serif;
   max-width: 450px;
+  height: auto;
   margin-top: 50px;
   border: solid 1.4px black;
   border-radius: 4px;
