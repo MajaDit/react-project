@@ -52,16 +52,16 @@ export default function App(props) {
             <WeatherInfo info={weatherData} />
             <Forecast coordinates={weatherData.coordinates} />
           </div>
-        </div>
-        <div className="credit">
-          <a
-            href="https://github.com/MajaDit/react-project"
-            target="_blank"
-            rel="noreferrer"
-          >
-            Open-source code
-          </a>{" "}
-          by <strong>Maja Ditrtova</strong>.
+          <div className="credit">
+            <a
+              href="https://github.com/MajaDit/react-project"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Open-source code
+            </a>{" "}
+            by <strong>Maja Ditrtova</strong>.
+          </div>
         </div>
       </div>
     );

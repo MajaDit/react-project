@@ -26,3 +26,8 @@
     font-size: 14px;
   }
 }
+@media (max-width: 280px) {
+  .Forecast {
+    margin-top: 40px;
+  }
+}

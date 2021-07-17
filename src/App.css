@@ -61,7 +61,7 @@ li {
   font-size: 15px;
 }
 .credit {
-  margin: 3px 0 0 85px;
+  margin: 3px 0 0 auto;
   font-size: 13px;
 }
 
@@ -87,5 +87,26 @@ li {
     top: 55px;
     left: -20px;
     font-size: 9px;
+  }
+  .credit {
+    text-align: center;
+  }
+}
+@media (max-width: 280px) {
+  .icon canvas {
+    max-width: 35px;
+  }
+  .current-temperature {
+    font-size: 35px;
+  }
+  .units {
+    font-size: 15px;
+  }
+
+  .input {
+    width: 60%;
+  }
+  .day-and-time {
+    font-size: 14px;
   }
 }
