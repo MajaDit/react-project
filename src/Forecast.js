@@ -27,6 +27,13 @@ export default function Forecast(props) {
                   <DailyForecast forecastData={forecast} />
                 </div>
               );
+            }
+            if (index === 4) {
+              return (
+                <div className="col d-none d-sm-block" key={index}>
+                  <DailyForecast forecastData={forecast} />
+                </div>
+              );
             } else {
               return null;
             }
