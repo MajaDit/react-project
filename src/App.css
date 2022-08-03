@@ -96,6 +96,9 @@ li {
   .input {
     max-width: 60%;
   }
+  .submit-button {
+    max-width: 30%;
+  }
   .icon canvas {
     max-width: 35px;
   }
