@@ -98,6 +98,7 @@ li {
   }
   .submit-button {
     max-width: 30% !important;
+    -webkit-appearance: none;
   }
   .icon canvas {
     max-width: 35px;
