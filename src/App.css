@@ -113,3 +113,10 @@ li {
     font-size: 14px;
   }
 }
+@media (max-width: 310px) {
+  .description,
+  .humidity,
+  .wind {
+    top: -5px;
+  }
+} ;
