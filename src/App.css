@@ -92,7 +92,10 @@ li {
     text-align: center;
   }
 }
-@media (max-width: 280px) {
+@media (max-width: 317px) {
+  .input {
+    max-width: 60%;
+  }
   .icon canvas {
     max-width: 35px;
   }
@@ -103,9 +106,6 @@ li {
     font-size: 15px;
   }
 
-  form.search-form {
-    max-width: 30% !important;
-  }
   .day-and-time {
     font-size: 14px;
   }
