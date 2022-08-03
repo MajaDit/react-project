@@ -94,7 +94,8 @@ li {
 }
 @media (max-width: 317px) {
   .input {
-    max-width: 60% !important;
+    max-width: 30% !important;
+    -webkit-appearance: none;
   }
   .submit-button {
     max-width: 30% !important;
