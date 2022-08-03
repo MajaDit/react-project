@@ -94,10 +94,10 @@ li {
 }
 @media (max-width: 317px) {
   .input {
-    max-width: 30% !important;
+    max-width: 40% !important;
   }
   .submit-button {
-    max-width: 30% !important;
+    max-width: 40% !important;
   }
   .icon canvas {
     max-width: 35px;
