@@ -103,8 +103,8 @@ li {
     font-size: 15px;
   }
 
-  .input {
-    width: 60%;
+  form.search-form {
+    max-width: 30% !important;
   }
   .day-and-time {
     font-size: 14px;
