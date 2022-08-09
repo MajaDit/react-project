@@ -92,12 +92,13 @@ li {
     text-align: center;
   }
 }
-@media (max-width: 317px) {
+@media (max-width: 440px) {
   .input {
     max-width: 40% !important;
   }
   .submit-button {
     max-width: 40% !important;
+    font-size: 15px !important;
   }
   .icon canvas {
     max-width: 35px;
