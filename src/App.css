@@ -74,6 +74,14 @@ li {
     margin: 30px auto;
     max-width: 300px;
   }
+  .input {
+    max-width: 40% !important;
+    font-size: 15px;
+  }
+  .submit-button {
+    max-width: 40% !important;
+    font-size: 15px !important;
+  }
   .icon canvas {
     max-width: 45px;
   }
@@ -93,14 +101,6 @@ li {
   }
 }
 @media (max-width: 440px) {
-  .input {
-    max-width: 40% !important;
-    font-size: 15px;
-  }
-  .submit-button {
-    max-width: 40% !important;
-    font-size: 15px !important;
-  }
   .icon canvas {
     max-width: 35px;
   }
